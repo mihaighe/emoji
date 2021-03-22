@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #bdbdbd;
+}
+
+.emoji-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 60vh;
+  width: 100vw;
+}
+
+.emoji {
+  --emoji-size: 250px;
+  margin: 1rem;
+  width: var(--emoji-size);
+  height: var(--emoji-size);
+}
+
+.head {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #ffc83d;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.eyes {
+  position: absolute;
+  top: calc(var(--emoji-size) * 0.25);
+  left: calc(var(--emoji-size) * 0.5);
+}
+
+.eye {
+  position: absolute;
+  width: calc(var(--emoji-size) * 0.075);
+  height: calc(var(--emoji-size) * 0.15);
+  background-color: black;
+  border-radius: 50%;
+}
+
+.eye-left {
+  left: calc(var(--emoji-size) * -0.2);
+}
+
+.eye-right {
+  right: calc(var(--emoji-size) * -0.2);
+}
+
+.mouth {
+  position: absolute;
+  bottom: calc(var(--emoji-size) * 0.15);
+  left: calc(var(--emoji-size) * 0.5);
+  transform: translateX(-50%);
+  background-color: black;
+}
+
+.smile {
+  --mouth-height: calc(var(--emoji-size) * 0.3);
+  width: calc(var(--emoji-size) * 0.6);
+  height: var(--mouth-height);
+  border-radius: 5% 5% var(--mouth-height) var(--mouth-height);
+}
+
+.open-mouth {
+  width: calc(var(--emoji-size) * 0.25);
+  height: calc(var(--emoji-size) * 0.3);
+  border-radius: 50%;
+}
+
+.face-mask {
+  left: calc(var(--emoji-size) * 0.2);
+  transform: none;
+  width: calc(var(--emoji-size) * 0.6);
+  height: calc(var(--emoji-size) * 0.35);
+  border-radius: 10%;
+  background-color: white;
+  border: calc(var(--emoji-size) * 0.01) solid #999;
+}
+
+.strap {
+  position: absolute;
+  background-color: white;
+  border: calc(var(--emoji-size) * 0.01) solid #999;
+  width: calc(var(--emoji-size) * 0.5);
+  height: calc(var(--emoji-size) * 0.1);
+  z-index: -2;
+}
+
+.strap-top-left {
+  transform: rotate(20deg);
+  top: calc(var(--emoji-size) * -0.05);
+  left: calc(var(--emoji-size) * -0.4);
+}
+.strap-top-right {
+  transform: rotate(-20deg);
+  top: calc(var(--emoji-size) * -0.05);
+  right: calc(var(--emoji-size) * -0.4);
+}
+
+.strap-bottom-left {
+  transform: rotate(-30deg);
+  bottom: calc(var(--emoji-size) * -0.06);
+  left: calc(var(--emoji-size) * -0.4);
+}
+
+.strap-bottom-right {
+  transform: rotate(30deg);
+  bottom: calc(var(--emoji-size) * -0.06);
+  right: calc(var(--emoji-size) * -0.4);
+}
+
+.head-devil {
+  background: radial-gradient(
+    circle,
+    rgba(162, 44, 163, 1) 8%,
+    rgba(91, 6, 82, 1) 55%
+  );
+  overflow: unset;
+}
+
+.eyes-devil {
+  position: absolute;
+  top: calc(var(--emoji-size) * 0.45);
+  left: calc(var(--emoji-size) * 0.5);
+}
+
+.eye-devil {
+  position: absolute;
+  width: calc(var(--emoji-size) * 0.04);
+  height: calc(var(--emoji-size) * 0.2);
+  background-color: black;
+  border-radius: 50%;
+}
+
+.eye-devil-left {
+  left: calc(var(--emoji-size) * -0.17);
+}
+
+.eye-devil-right {
+  right: calc(var(--emoji-size) * -0.17);
+}
+
+.eyebrow {
+  position: absolute;
+  background-color: black;
+  width: calc(var(--emoji-size) * 0.17);
+  height: calc(var(--emoji-size) * 0.02);
+}
+
+.left-eyebrow {
+  transform: rotate(20deg);
+  top: calc(var(--emoji-size) * -0.04);
+  left: calc(var(--emoji-size) * -0.25);
+}
+
+.right-eyebrow {
+  transform: rotate(-20deg);
+  top: calc(var(--emoji-size) * -0.04);
+  right: calc(var(--emoji-size) * -0.25);
+}
+
+.devil-smile {
+  --mouth-height: calc(var(--emoji-size) * 0.1);
+  width: calc(var(--emoji-size) * 0.24);
+  height: var(--mouth-height);
+  border-radius: 5% 5% var(--mouth-height) var(--mouth-height);
+}
+
+.horns {
+  position: absolute;
+  top: calc(var(--emoji-size) * 0.2);
+  left: calc(var(--emoji-size) * 0.5);
+}
+
+.horn {
+  position: absolute;
+  width: calc(var(--emoji-size) * 0.3);
+  height: calc(var(--emoji-size) * 0.2);
+  background-color: black;
+}
+
+.horn-left {
+  left: calc(var(--emoji-size) * 0.3);
+  border-radius: 0px 0px calc(var(--emoji-size) * 0.5) 0px;
+}
+
+.horn-right {
+  right: calc(var(--emoji-size) * 0.3);
+  border-radius: 0px 0px 0px calc(var(--emoji-size) * 0.5);
+}
+
+.slidecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  transition: opacity .2s;
+}
